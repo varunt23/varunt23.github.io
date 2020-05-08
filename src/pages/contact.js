@@ -1,18 +1,18 @@
 import React from "react"
 import {Link} from "gatsby"
 
+
 import Layout from "../components/layout"
 
-const IndexPage = () => {
+const ContactPage = () => {
     return (
-
         <Layout>
-            <h1>Hello</h1>
+            <h1>Contact</h1>
             <h2>Varun Tanna</h2>
-            <p> need a developer <Link to ="/contact"> contact me </Link></p>
+            <p> <a href="https://github.com/varunt23/"> Github </a></p>
         </Layout>
     )
 }
 
 
-export default IndexPage
+export default ContactPage
