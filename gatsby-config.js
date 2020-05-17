@@ -4,21 +4,42 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+
 module.exports = {
-  /* Your site config here */
+
   siteMetadata: {
-    title:"Personal Website!",
+    title:"Varun Tanna",
     author: "Varun  Tanna"
   },
   plugins: [
-    'gatsby-plugin-sass',
+    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-sass`,
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name:'src',
-        path:`${__dirname}/src/`
-      }
+        path: `${__dirname}/src/`,
+        name: 'src',
+      },
     },
-    'gatsby-transformer-remark'
+    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        // In your gatsby-transformer-remark plugin array
+        plugins: [
+          {
+            resolve:'gatsby-remark-relative-images',
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 750,
+              linkImagesToOriginal:false
+            },
+          },
+        ],
+      },
+    },
   ],
-}
+};
+
