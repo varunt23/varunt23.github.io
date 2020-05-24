@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Head from '../components/head'
 import resumeStyles from "./resume.module.scss"
 import pic from './download.png';
-
+import resume from './secondresume.pdf';
 
 
 
@@ -12,7 +12,7 @@ const AboutPage = () => {
     return (
         <Layout>
             <Head title="Resume"></Head>
-            <div className={resumeStyles.cont} ><h2 className={resumeStyles.mainheader} >View Resume Here or Download </h2><a href="./resume.pdf" download><img className={resumeStyles.image} alt="LinkedIn" src={pic} width="30" height="30"></img></a></div>
+            <div className={resumeStyles.cont} ><h2 className={resumeStyles.mainheader} >View Resume Here or Download Now - </h2><a href={resume} download><img className={resumeStyles.image} alt="LinkedIn" src={pic} width="30" height="30"></img></a></div>
             <ul className={resumeStyles.posts}>
                 <li className={resumeStyles.post}>
                     <div>
